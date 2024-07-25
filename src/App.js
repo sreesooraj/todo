@@ -42,7 +42,12 @@ return (
   <p>{obj.text}</p>
 </div>
 <div className="right">
-  <i className="fa fa-times"></i>
+  <i onClick={(e)=>setToDos(toDos.filter((i)=>{
+    console.log(i.id,e.target.id,"ssssssssssssssssssssssssss")
+    if (i.id!=e.target.id){
+      return i
+    }
+  }))} className="fa fa-times" id={obj.id}></i>
 </div>
 </div>})}
   <div>
